@@ -15,7 +15,7 @@ export default class HomeScreen extends Component {
     this.getArticles();
   }
   getArticles = () => {
-    const url = "http://localhost:5000/get-movie";
+    const url = "http://localhost:5000/get-Articles";
     axios
       .get(url)
       .then(response => {
@@ -29,7 +29,7 @@ export default class HomeScreen extends Component {
   };
 
   likedArticle = () => {
-    const url = "http://localhost:5000/liked-movie";
+    const url = "http://localhost:5000/liked-article";
     axios
     .post(url)
       .then(response => {
@@ -41,7 +41,7 @@ export default class HomeScreen extends Component {
   };
 
   unlikedArticle = () => {
-    const url = "http://localhost:5000/unliked-movie";
+    const url = "http://localhost:5000/unliked-Article";
     axios
     .post(url)
       .then(response => {
